@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mockup4</title>
+    </head>
+    <body>
+        
+        <div id="form"> 
+            <h3>Your Information</h3>
+            <form action="data.txt" method="POST">
+                <table>
+                    <tr>
+                        <td>
+                            <label for="name">Name:</label>
+                        </td>
+                        <td>
+                            <input class="typeText" type="text" name="name">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="email">Email:</label>
+                        </td>
+                        <td>
+                            <input class="typeText" type="email" name="email" >
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="number">Phone:</label>
+                        </td>
+                        <td>
+                            <input class="typeText" type="number" name="number" >
+                        </td>
+                    </tr>
+                </table>
+
+                <tr>
+                    <td class="checkboxTD">
+                        <input class="checkbox" type="checkbox" name="location">
+                        <label class="checkboxLabel" for="location">From San Francisco</label>
+                    </td>
+                    <td class="checkboxTD">
+                        <input type="checkbox" name="location2">
+                        <label class="checkboxLabel" for="location2">Not From San Francisco</label>
+                    </td>
+                </tr>
+            </form>
+            <br>
+            <button id="buttonShadow" style="border-width: 2px;">Submit</button>
+        </div>
+        
+
+        <style>
+            h3 {
+                margin-bottom: 2%;
+            }
+            #form {
+                margin-left: 60px;
+            }
+            td {
+                padding: 7px;
+            }
+            label {
+                width: 500px;
+            }
+            input {
+                border-width: 2px;
+            }
+            .typeText {
+                width: 125%;
+            }
+            .checkboxTD {
+                padding-top: 500px;
+            }
+            .checkbox {
+                margin-left: 15px;
+            }
+            .checkboxLabel {
+                padding-right: 8%;
+            }
+            #buttonShadow {
+                margin-left: 10px;
+                border: 1px solid;
+                box-shadow: 1px 2px;
+            }
+        </style>
+    </body>
+</html>
