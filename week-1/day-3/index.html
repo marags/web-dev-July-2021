@@ -9,6 +9,40 @@
     <h1>What is CSS?</h1>
     <h2>We use CSS to add <em>styles</em> to the HTML elements on our page.</h2>
     <!-- inline style the span to be red -->
-    <p>We want to stlye this span: <span>The power of CSS</span></p>
+
+    <!-- border: borderThickness (px) boderType borderColor -->
+
+    <p>We want to stlye this span: <span style="color: red; border: 10px dashed tomato;">The power of CSS</span></p>
+
+    <div style="margin: 10px auto;">
+      <span>Rectangle</span>
+    </div>
+
+    
+    <span>will you show up next to the rectangle? no</span>
+    <style>
+      h2 {
+        text-align: center;
+        font-size: 12px;
+        /* display : ; */
+        display: table;
+      }
+
+      div {
+        border: 1px solid green;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        text-align: center;
+        background-color: lemonchiffon;
+    
+      }
+      /* span {
+        position: relative;
+        top: 38px;
+        left: 7px;
+      } */
+    </style>
+
   </body>
 </html>
