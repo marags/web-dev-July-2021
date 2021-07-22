@@ -1,0 +1,22 @@
+
+#div1 {
+    background-color: rgb(160, 75, 49);
+}
+#div2 {
+    background-color: #27CCD2;
+}
+#div3 {
+    background-color: blue;
+}
+h1 {
+    text-transform: lowercase;
+    color: #757575;
+}
+h2 {
+    text-align: right;
+    color: #a2006d;
+}
+h3 {
+    font-size: 58px;
+    color: #17CAED;
+}
