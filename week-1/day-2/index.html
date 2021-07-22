@@ -10,10 +10,63 @@
 
 </head>
 <body>
+    <p></p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>Aspernatur doloremque provident et nulla atque vitae aliquam nostrum adipisci, id itaque unde voluptatum possimus cupiditate culpa quisquam rerum ullam. Beatae, aliquid.</p>
+    <br>
+    <hr>
+
+    <table border="1px">
+        <!-- thead - table head  -->
+        <thead>
+            <!-- tr - table row -->
+            <tr>
+                <th colspan="2">The table header</th>
+                <th colspan="2">The table header two</th>
+            </tr>
+        </thead>
+        <!-- table body  -->
+        <tbody>
+            <tr>
+                <td>The table body</td>
+                <td>with two columns</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table border="1px">
+        <tr>
+            <th>column 1</th>
+            <td>column 2</td>
+            <td>column 3</td>
+        </tr>
+        <tr>
+            <td>column 1</td>
+            <td>column 2</td>
+            <td>column 3</td>
+        </tr>
+    </table>
+
+    <table>
+        <td>
+            <label for="name">First Name</label>
+            <input type="text">
+        </td>
+        <td>
+            <label for="name">Last Name</label>
+            <input type="text">
+        </td>
+        <td>
+            <label for="email">Email</label>
+            <input type="text">
+        </td> 
+    </table>
+
+
+<div style="margin-bottom: 1000px;"></div>
 
 <div>
-    <video width="400" height="400" controls loop autoplay>
-        <source src="video/nature.mp4" type="video/mp4">
+    <video width="600" height="400" controls loop autoplay>
+        <source src="./video/nature.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
 </div>
@@ -21,9 +74,12 @@
 <div>
     <audio controls>
         <source src="./music/song1.mp3" type="audio/mpeg">
+        <!-- any sources below act as a backup if the ones above fail to load -->
+        <source src="./music/song2.mp3" type="audio/mpeg">
         Your browser does not support the audio tag.
     </audio>
 </div>
+
 
 
 <!--<form action="#">-->
