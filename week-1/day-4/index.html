@@ -31,29 +31,56 @@
         }
 
         /* Add your flexbox CSS below here */
-
+        /* section is the flex container  */
+        section {
+            display: flex;
+            /* flex-direction: row-reverse; */
+            flex-wrap: wrap;
+        }
+        /* col1 - col3 are childern of the flex container  */
+        .col1 {
+            flex: 2;
+        }
+        .col2 {
+            flex: 4;
+        }
+        .col3 {
+            flex: 3;
+        }
     </style>
 </head>
 <body>
 <header>
     <h1>Sample flexbox example</h1>
 </header>
+<!-- apply display flex to the section element 
+     section - Flex container (display: block)
+     articles - Flex items (display: inline-block)
 
+     class is a type of selector that we can reference in CSS that is typically meant for applying to multiple elements
+
+     referencing a class, we use . (period)
+
+     ID is similar but it is meant to only be aplied to one element
+
+     referencing an ID, we use # (hashtag/number sign, pound sign)
+
+-->
 <section>
 
-    <article>
+    <article class="col1">
         <h2>First article</h2>
 
         <p>Tacos actually microdosing, pour-over semiotics banjo chicharrones retro fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork belly, everyday carry ennui pickled sriracha normcore hashtag polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund twee, leggings salvia iPhone photo booth health goth gastropub hammock.</p>
     </article>
 
-    <article>
+    <article class="col2">
         <h2>Second article</h2>
 
         <p>Tacos actually microdosing, pour-over semiotics banjo chicharrones retro fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork belly, everyday carry ennui pickled sriracha normcore hashtag polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund twee, leggings salvia iPhone photo booth health goth gastropub hammock.</p>
     </article>
 
-    <article>
+    <article class="col3">
         <h2>Third article</h2>
 
         <p>Tacos actually microdosing, pour-over semiotics banjo chicharrones retro fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork belly, everyday carry ennui pickled sriracha normcore hashtag polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund twee, leggings salvia iPhone photo booth health goth gastropub hammock.</p>
