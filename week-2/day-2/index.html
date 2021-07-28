@@ -21,65 +21,66 @@ semantic markup
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./styles/main.css">
     <title>Document</title>
 
 </head>
 <body>
+    <h1>Intro to JS - Part Deux</h1>
+    <span>another element</span>
+    <div>
+        <audio style="display: none;" id="myBearSound" controls>
+            <source src="./sounds/animal-sound.mp3" type="audio/mpeg">
+        </audio>
+    </div>
 
-<!-- <table border="1">
-    <tr>
-        <td>song</td>
-        <td align="center">Play</td>
-    </tr>
-    <tr>
-        <td>song 1</td>
-        <td>
+    <button onclick="playSound()">Play Sound</button>
+
+    <h1 id="greeting">Hello which version is better (Michael/Mike)</h1>
+
+    <!-- When a function takes in data, it's called an argument  -->
+    <button onclick="name1('Michael')">Michael</button>
+    <button onclick="name2('Mike')">Mike</Button>
+
+
+    <script>
+
+        function name1(personString) {
+            // console.log the person name
+            console.log("Hello " + personString);
+            // changing html inside of a tag
+            document.getElementById("greeting").innerHTML = personString + " is the better version";
+            document.getElementById("greeting").style.backgroundColor = "orange"
+        }
+
+        // Cleaner way to change html using variable to captuer the element in the DOM
+        // and reuse the variable to change various attributes for the tag(s)
+        function name2(personName) {
+            let update = document.getElementById("greeting")
+            update.innerHTML = personName + " is the better version"
+            update.style.backgroundColor = "lightblue"
+        }
+        
+        // // Block Scope - Global Scope
+        // var todo = {}; // Object Literal;
+        // const constantTodo = {};
+        // // function syntax
+        // // function functionName (paramaters) {
+        // //
+        // //}
+        // function playSound(){
+        //     // executed when the function ran/invoked
             
-        </td>
-    </tr>
-    <tr>
-        <td>song 2</td>
-        <td>Some music here</td>
-    </tr>
-</table> -->
+        //     document.getElementById("myBearSound").play()
 
-<!--<form action="#">-->
-<!--    <label for="name">name</label>-->
-<!--    <input type="text" id="name">-->
-<!--    <br>-->
-<!--    <label for="address">address</label>-->
-<!--    <input type="text" id="address">-->
-<!--    <br>-->
-<!--    <label for="Date of Birth">Date of Birth</label>-->
-<!--    <input type="text" id="Date of Birth">-->
-<!--    <br>-->
-<!--<button>Submit</button>-->
-<!--</form>-->
+        // }
+
+        // //innerVariable; // get a reference error again
+
+        // // invoke a function - start function
+        // //playSound();
 
 
-<!--Challege to vertically align the input fields no matter how long the label text is-->
-<!--put the label and input tags in their own tables inside of a table row.-->
-
-
-<div style="margin-bottom: 1000px"></div>
-
-<div>
-    <audio style="display: none" id="audio1" controls>
-        <source src="./music/bear.mp3" type="audio/mpeg">
-    </audio>
-</div>
-<br><br><br>
-
-<!--<button onclick="run1()">play 1</button>-->
-
-<!--<script>-->
-<!--  function run1() {-->
-<!--    const audio = document.getElementById('audio1');-->
-<!--    audio.play()-->
-<!--  }-->
-<!--</script>-->
-
+    </script>
 
 </body>
 </html>
