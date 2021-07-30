@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 2 Day 4</title>
+
+    <style>
+        #window {
+            width: 400px;
+            height: 400px;
+            margin: 0 auto;
+        }
+        img {
+            width: 400px;
+            height: 400px;  
+        }
+        #slider {
+            display: flex;
+        }
+        #container {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            top: -100%;
+            height: 100%;
+        }
+        button:hover {
+            background-color: tomato;
+        }
+    </style>
+</head>
+<body>
+    <div id="window">
+        <div id="slider">
+            <img src="./images/pika1.png" alt="">
+            <img src="./images/pika2.png" alt="">
+            <img src="./images/pika3.png" alt="">
+        </div>
+        <div id="container">
+            <button id="previousImage" onclick="previousImage()">&#60;</button>
+            <button id="nextImage" onclick="nextImage()">&#62;</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
