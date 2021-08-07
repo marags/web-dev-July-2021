@@ -14,9 +14,7 @@
     
 <body> 
     <div class="container"> 
-        <h1 style="text-align:center;color:green;"> 
-          Vets in Tech 
-      </h1> 
+        <h1 style="text-align:center;color:green;"> Vets in Tech </h1> 
         <form> 
             <div class="form-group"> 
                 <label for="">Enter Your Name:</label> 
@@ -28,22 +26,93 @@
             <div class="form-group"> 
                 <button id="btn-alert"
                         class="btn btn-success btn-lg float-right" 
-                        type="submit"> 
-                     Submit  
+                        type="submit"
+                        onclick="event.preventDefault(); toggleModal()";
+                        > 
+                        Submit  
                 </button> 
             </div> 
         </form> 
     </div> 
+
+    <!-- <div id="modal" style="display: none"> Hidden Div</div> styling moved below this is to reflect the change -->
+    <div id="modal"> Hidden Div
+        <button onclick="toggleModal()">test button!</button>
+    </div>
+
+
     <script>
+
+        let booleanCheck = false;
+        let modal = document.getElementById("modal");
         var user_name = document.getElementById("name");
-        document.getElementById("btn-alert").addEventListener("click", function(){
-            var value=user_name.value.trim();
-            if(!value)
-                alert("Name Cannot be empty!");
-            else
-                alert("Hello, " + value + "!\nGreetings From Vets in Tech.");
-        });
+
+        function toggleModal() {
+            if(booleanCheck == false){
+                modal.style.display = "block";
+                booleanCheck = true;
+            } else if (booleanCheck == true) {
+                modal.style.display = "none";
+                booleanCheck = false;
+            } else {
+                console.log("There is an error in the conditionals!");
+            }
+        }
+
+
+        // document.getElementById("btn-alert").addEventListener("click", function(event) {
+        //     event.preventDefault(); // Prevent the submit button from refreshing the page and removing the hidden div (could make a nonButton)
+        //     if(booleanCheck == false){
+        //         modal.style.display = "block";
+        //         booleanCheck = true;
+        //     } else if (booleanCheck == true) {
+        //         modal.style.display = "none";
+        //         booleanCheck = false;
+        //     } else {
+        //         console.log("There is an error in the conditionals!");
+        //     }
+        //     var value=user_name.value.trim();
+
+
+
+        //     // if(!value)
+        //     //     alert("Name Cannot be empty!");
+        //     // else
+        //     //     alert("Hello, " + value + "!\nGreetings From Vets in Tech.");
+        // });
     </script>
+    <style>
+        /*         
+        This styling is just used to demostrate how position: fixed keeps the element on the same 
+        position on the screen while scrolling
+        body{
+            height: 1000vh;
+        } */
+
+        body{
+            height: 100vh;
+            width: 100vw;
+        }
+        #modal {
+            position: fixed;
+            /* 
+                1-value
+                    all four margins
+                2-values
+                    top/bottom right/left
+                3-values
+                    top right/left bottom
+                4-values
+                    top right bottom left    
+            */
+            margin: 10em 25em;
+            background-color: yellowgreen;
+            height: 10em;
+            width: 20em;
+            display: none;
+            text-align: center;
+        }
+    </style>
 </body> 
    
 </html>
